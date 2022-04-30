@@ -1,11 +1,3 @@
-#FROM alpine:3.12 AS cmps
-
-#RUN apk -U --no-cache add \
-#    python3 py3-pip python3-dev \
-#    make gcc musl-dev libffi-dev openssl-dev zlib-dev\
-#    git && \
-#    pip install pycrypto
-
 FROM python:3.9-alpine3.13 AS cmps
 RUN apk -U --no-cache add \
    make gcc musl-dev libffi-dev openssl-dev zlib-dev\
@@ -40,7 +32,7 @@ RUN cd /code/compose && \
 
 
 
-FROM jenkins/jenkins:alpine
+FROM jenkins/jenkins:alpine-jdk11
 
 MAINTAINER trion development GmbH "info@trion.de"
 
