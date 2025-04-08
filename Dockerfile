@@ -1,4 +1,4 @@
-FROM jenkins/jenkins:jdk21
+FROM jenkins/jenkins:alpine-jdk21
 
 MAINTAINER trion development GmbH "info@trion.de"
 
